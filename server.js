@@ -3,6 +3,7 @@ const app = express()
 PORT = 4000
 
 /* === ejs view engine to ejs == */
+app.set('view engine', 'ejs')
 
 // Index page 
 app.get('',(req,res)=>{
@@ -18,6 +19,6 @@ app.get('/about',(req,res)=>{
 
 
 app.listen(PORT,()=>{
-    console.log(`Your are on ${PORT}`);
+    console.log(`Your server is Listening on ${PORT}`);
 })
 
