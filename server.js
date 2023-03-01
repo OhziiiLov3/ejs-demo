@@ -5,17 +5,9 @@ PORT = 4000
 /* === ejs view engine to ejs == */
 app.set('view engine', 'ejs')
 
-// Index page 
-app.get('',(req,res)=>{
-    res.render('pages/index')
-});
 
-// About Page 
-
-app.get('/about',(req,res)=>{
-    res.render('pages/about')
-});
-
+const ejsController = require('./controllers/main')
+app.use("",ejsController)
 
 
 app.listen(PORT,()=>{
